@@ -6,6 +6,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 from typing import List, Dict, Any, Optional
 from utils.logger import get_logger
+from models.aufmass_item import AufmassItem
 
 logger = get_logger(__name__)
 
@@ -96,14 +97,15 @@ class AufmassService:
             ID of the created measurement
         """
         try:
-            measurement_id = self.data_service.save_measurement(measurement_data)
+            measurement = AufmassItem.from_dict(measurement_data)
+            measurement_id = self.data_service.save_measurement(measurement)
             logger.info(f"Measurement created with ID: {measurement_id}")
             return measurement_id
         except Exception as e:
             logger.error(f"Error creating measurement: {e}")
             return 0
     
-    def update_measurement(self, measurement_data: Dict[str, Any]) -> bool:
+    def update_measurement(self, measurement_data: Dict[str, Any]) -> int:
         """
         Update an existing measurement.
         
@@ -111,15 +113,16 @@ class AufmassService:
             measurement_data: Measurement data to update
             
         Returns:
-            True if successful, False otherwise
+            ID of the updated measurement or 0 on failure
         """
         try:
-            self.data_service.save_measurement(measurement_data)
-            logger.info(f"Measurement updated: {measurement_data.get('id')}")
-            return True
+            measurement = AufmassItem.from_dict(measurement_data)
+            measurement_id = self.data_service.save_measurement(measurement)
+            logger.info(f"Measurement updated: {measurement_id}")
+            return measurement_id
         except Exception as e:
             logger.error(f"Error updating measurement: {e}")
-            return False
+            return 0
     
     def delete_measurement(self, measurement_id: int) -> bool:
         """

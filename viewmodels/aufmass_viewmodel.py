@@ -121,9 +121,9 @@ class AufmassViewModel(QObject):
                 measurement_data['position_id'] = self._current_position_id
                 
             # Update the measurement
-            success = self._aufmass_service.update_measurement(measurement_data)
-            
-            if not success:
+            measurement_id = self._aufmass_service.update_measurement(measurement_data)
+
+            if measurement_id == 0:
                 raise ValueError(f"Failed to update measurement {measurement_data.get('id')}")
             
             # Reload measurements
