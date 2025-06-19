@@ -1,0 +1,175 @@
+flowchart TD
+    %% Hauptmodule
+    main["main.py<br>(Anwendungseinstieg)"]
+    app["app.py<br>(Bootstrap)"]
+    main_window["main_window.py<br>(Hauptfenster)"]
+    service_container["service_container.py<br>(DI-Container)"]
+    
+    %% Models
+    subgraph models["Models (Datenstrukturen)"]
+        project_model["project.py<br>(Projekte)"]
+        position_model["position.py<br>(Positionen)"]
+        aufmass_model["aufmass_item.py<br>(Aufmaße)"]
+        fliegengitter_model["fliegengitter_item.py<br>(Fliegengitter)"]:::new
+        sketch_model["sketch_item.py<br>(Skizzen)"]:::potential
+    end
+    
+    %% Services
+    subgraph services["Services (Geschäftslogik)"]
+        subgraph data_services["Daten-Services"]
+            data_service["data_service.py<br>(DB-Zugriff)"]
+            config_service["config_service.py<br>(Konfiguration)"]
+        end
+        
+        subgraph domain_services["Domänen-Services"]
+            position_service["position_service.py<br>(Positionen)"]
+            aufmass_service["aufmass_service.py<br>(Aufmaße)"]
+            fliegengitter_service["fliegengitter_service.py<br>(Fliegengitter)"]:::new
+            sketch_service["sketch_service.py<br>(Skizzen)"]:::potential
+        end
+        
+        subgraph util_services["Hilfsdienste"]
+            logger["logger.py<br>(Logging)"]
+            utils_logger["utils/logger.py<br>(Logger-Bridge)"]
+            error_handler["error_handler.py<br>(Fehlerbehandlung)"]
+            event_bus["event_bus.py<br>(Ereignisverteiler)"]
+            style_service["style_service.py<br>(UI-Styling)"]
+        end
+    end
+    
+    %% ViewModels
+    subgraph viewmodels["ViewModels (Präsentationslogik)"]
+        main_vm["main_viewmodel.py<br>(App-Steuerung)"]
+        project_vm["project_viewmodel.py<br>(Projekt-Steuerung)"]
+        position_vm["position_viewmodel.py<br>(Positions-Steuerung)"]
+        aufmass_vm["aufmass_viewmodel.py<br>(Aufmaß-Steuerung)"]
+        fliegengitter_vm["fliegengitter_viewmodel.py<br>(Fliegengitter-Steuerung)"]:::new
+        sketch_vm["sketch_viewmodel.py<br>(Skizzen-Steuerung)"]:::potential
+    end
+    
+    %% Views
+    subgraph views["Views (UI-Controller)"]
+        project_view["project_view.py<br>(Projekt-Ansicht)"]
+        position_view["position_view.py<br>(Positions-Ansicht)"]
+        aufmass_view["aufmass_view.py<br>(Aufmaß-Ansicht)"]
+        fliegengitter_view["fliegengitter_view.py<br>(Fliegengitter-Ansicht)"]:::new
+        sketch_view["sketch_view.py<br>(Skizzen-Ansicht)"]:::potential
+    end
+    
+    %% UI
+    subgraph ui["UI-Komponenten"]
+        base_ui["base_ui.py<br>(Basis-Komponenten)"]
+        project_ui["project_ui.py<br>(Projekt-UI)"]
+        position_ui["position_ui.py<br>(Positions-UI)"]
+        aufmass_ui["aufmass_ui.py<br>(Aufmaß-UI)"]
+        fliegengitter_ui["fliegengitter_ui.py<br>(Fliegengitter-UI)"]:::new
+        sketch_ui["sketch_ui.py<br>(Zeichenfläche)"]:::potential
+    end
+    
+    %% Event-Handling mit Event-Bus
+    event_flow["Ereignis-Weiterleitung"]
+    event_bus --- event_flow
+    event_flow --> main_vm
+    event_flow --> project_vm
+    event_flow --> position_vm
+    event_flow --> aufmass_vm
+    event_flow --> fliegengitter_vm
+    event_flow -.-> sketch_vm
+    
+    %% Externe Bibliotheken
+    subgraph external["Externe Abhängigkeiten"]
+        pyqt["PyQt6<br>(GUI-Framework)"]
+        sqlite["SQLite<br>(Datenbank)"]
+    end
+    
+    %% Hauptbeziehungen
+    main --> main_window
+    main --> app
+    app --> service_container
+    
+    %% Verbindungen der Hauptfenster
+    main_window --> pyqt
+    main_window --"Tab Verwaltung"--> project_view
+    main_window --"Tab Verwaltung"--> position_view
+    main_window --"Tab Verwaltung"--> aufmass_view
+    main_window --"Tab Verwaltung"--> fliegengitter_view
+    main_window --"Tab Verwaltung"--> sketch_view
+    
+    %% Service-Container DI-Verbindungen
+    service_container --"Registriert"--> data_service
+    service_container --"Registriert"--> position_service
+    service_container --"Registriert"--> aufmass_service
+    service_container --"Registriert"--> config_service
+    service_container --"Registriert"--> fliegengitter_service
+    service_container --"Registriert"--> sketch_service
+    service_container --"Registriert"--> style_service
+    service_container --"Registriert"--> error_handler
+    
+    %% Kommunikation zwischen ViewModel und View
+    project_vm <--"MVVM-Binding"--> project_view
+    position_vm <--"MVVM-Binding"--> position_view
+    aufmass_vm <--"MVVM-Binding"--> aufmass_view
+    fliegengitter_vm <--"MVVM-Binding"--> fliegengitter_view
+    sketch_vm <-."MVVM-Binding".-> sketch_view
+    
+    %% Views zu UI
+    project_view --> project_ui
+    position_view --> position_ui
+    aufmass_view --> aufmass_ui
+    fliegengitter_view --> fliegengitter_ui
+    sketch_view -.-> sketch_ui
+    
+    %% UI-Vererbung
+    project_ui --> base_ui
+    position_ui --> base_ui
+    aufmass_ui --> base_ui
+    fliegengitter_ui --> base_ui
+    sketch_ui -.-> base_ui
+    
+    %% ViewModel-Service Verbindungen
+    project_vm --> data_service
+    position_vm --> data_service
+    position_vm --> position_service
+    aufmass_vm --> position_service
+    aufmass_vm --> aufmass_service
+    fliegengitter_vm --> fliegengitter_service
+    sketch_vm -.-> sketch_service
+    
+    %% Datenfluss zu den Models
+    data_service --> project_model
+    data_service --> position_model
+    data_service --> aufmass_model
+    data_service --> fliegengitter_model
+    data_service -.-> sketch_model
+    
+    %% Service-Abhängigkeiten
+    utils_logger --> logger
+    position_service --> data_service
+    aufmass_service --> data_service
+    fliegengitter_service --> data_service
+    sketch_service -.-> data_service
+    data_service --> sqlite
+    
+    %% Styling & Fehlerbehandlung
+    style_service --> main_window
+    error_handler --> logger
+    
+    %% Styling für das Diagramm
+    classDef new stroke:#2ecc71,stroke-width:2px,stroke-dasharray:5
+    classDef potential stroke:#3498db,stroke-width:2px,stroke-dasharray:3
+    classDef models fill:#f9d5e5,stroke:#333
+    classDef services fill:#d5e5f9,stroke:#333
+    classDef viewmodels fill:#f9e5d5,stroke:#333
+    classDef views fill:#d5f9e5,stroke:#333
+    classDef ui fill:#e5d5f9,stroke:#333
+    classDef main fill:#f5f5f5,stroke:#333
+    classDef external fill:#f0f0f0,stroke:#999
+    
+    %% Anwendung der Stile
+    class project_model,position_model,aufmass_model,fliegengitter_model,sketch_model models
+    class data_service,position_service,aufmass_service,config_service,logger,utils_logger,fliegengitter_service,sketch_service,error_handler,event_bus,style_service services
+    class main_vm,project_vm,position_vm,aufmass_vm,fliegengitter_vm,sketch_vm viewmodels
+    class project_view,position_view,aufmass_view,fliegengitter_view,sketch_view views
+    class base_ui,project_ui,position_ui,aufmass_ui,fliegengitter_ui,sketch_ui ui
+    class main,app,main_window,service_container main
+    class pyqt,sqlite external
