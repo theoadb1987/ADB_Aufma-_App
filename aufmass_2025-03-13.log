@@ -1,0 +1,107 @@
+2025-03-13 22:32:44,342 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 22:51:19,610 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 22:51:19,699 - services.config_service - INFO - Configuration saved to file
+2025-03-13 22:51:19,699 - services.config_service - INFO - Created default configuration
+2025-03-13 22:51:19,699 - services.config_service - INFO - ConfigService initialized with file: config.json
+2025-03-13 22:51:19,701 - services.position_service - INFO - PositionService initialized
+2025-03-13 22:51:19,702 - services.aufmass_service - INFO - AufmassService initialized
+2025-03-13 22:51:19,702 - services.style_service - INFO - StyleService initialized with theme: dark
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: ConfigService
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: DataService
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: PositionService
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: AufmassService
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: StyleService
+2025-03-13 22:51:19,702 - __main__ - INFO - Services initialized and registered
+2025-03-13 22:51:19,702 - viewmodels.main_viewmodel - INFO - MainViewModel initialized
+2025-03-13 22:51:19,702 - viewmodels.project_viewmodel - INFO - ProjectViewModel initialized
+2025-03-13 22:51:19,702 - viewmodels.position_viewmodel - INFO - PositionViewModel initialized
+2025-03-13 22:51:19,702 - viewmodels.aufmass_viewmodel - INFO - AufmassViewModel initialized
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: MainViewModel
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: ProjectViewModel
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: PositionViewModel
+2025-03-13 22:51:19,702 - services.service_container - INFO - Registered service: AufmassViewModel
+2025-03-13 22:51:19,702 - __main__ - INFO - ViewModels initialized and registered
+2025-03-13 23:00:17,751 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 23:00:17,807 - services.config_service - INFO - Configuration loaded from file
+2025-03-13 23:00:17,807 - services.config_service - INFO - ConfigService initialized with file: config.json
+2025-03-13 23:00:17,808 - services.position_service - INFO - PositionService initialized
+2025-03-13 23:00:17,808 - services.aufmass_service - INFO - AufmassService initialized
+2025-03-13 23:00:17,808 - services.style_service - INFO - StyleService initialized with theme: dark
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: ConfigService
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: DataService
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: PositionService
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: AufmassService
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: StyleService
+2025-03-13 23:00:17,808 - __main__ - INFO - Services initialized and registered
+2025-03-13 23:00:17,808 - viewmodels.main_viewmodel - INFO - MainViewModel initialized
+2025-03-13 23:00:17,808 - viewmodels.project_viewmodel - INFO - ProjectViewModel initialized
+2025-03-13 23:00:17,808 - viewmodels.position_viewmodel - INFO - PositionViewModel initialized
+2025-03-13 23:00:17,808 - viewmodels.aufmass_viewmodel - INFO - AufmassViewModel initialized
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: MainViewModel
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: ProjectViewModel
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: PositionViewModel
+2025-03-13 23:00:17,808 - services.service_container - INFO - Registered service: AufmassViewModel
+2025-03-13 23:00:17,808 - __main__ - INFO - ViewModels initialized and registered
+2025-03-13 23:04:51,279 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 23:04:51,366 - services.config_service - INFO - Configuration loaded from file
+2025-03-13 23:04:51,366 - services.config_service - INFO - ConfigService initialized with file: config.json
+2025-03-13 23:04:51,368 - services.position_service - INFO - PositionService initialized
+2025-03-13 23:04:51,368 - services.aufmass_service - INFO - AufmassService initialized
+2025-03-13 23:04:51,368 - services.style_service - INFO - StyleService initialized with theme: dark
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: ConfigService
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: DataService
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: PositionService
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: AufmassService
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: StyleService
+2025-03-13 23:04:51,368 - __main__ - INFO - Services initialized and registered
+2025-03-13 23:04:51,368 - viewmodels.main_viewmodel - INFO - MainViewModel initialized
+2025-03-13 23:04:51,368 - viewmodels.project_viewmodel - INFO - ProjectViewModel initialized
+2025-03-13 23:04:51,368 - viewmodels.position_viewmodel - INFO - PositionViewModel initialized
+2025-03-13 23:04:51,368 - viewmodels.aufmass_viewmodel - INFO - AufmassViewModel initialized
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: MainViewModel
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: ProjectViewModel
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: PositionViewModel
+2025-03-13 23:04:51,368 - services.service_container - INFO - Registered service: AufmassViewModel
+2025-03-13 23:04:51,368 - __main__ - INFO - ViewModels initialized and registered
+2025-03-13 23:06:30,340 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 23:06:30,399 - services.config_service - INFO - Configuration loaded from file
+2025-03-13 23:06:30,399 - services.config_service - INFO - ConfigService initialized with file: config.json
+2025-03-13 23:06:30,400 - services.position_service - INFO - PositionService initialized
+2025-03-13 23:06:30,400 - services.aufmass_service - INFO - AufmassService initialized
+2025-03-13 23:06:30,400 - services.style_service - INFO - StyleService initialized with theme: dark
+2025-03-13 23:06:30,400 - services.service_container - INFO - Registered service: ConfigService
+2025-03-13 23:06:30,400 - services.service_container - INFO - Registered service: DataService
+2025-03-13 23:06:30,400 - services.service_container - INFO - Registered service: PositionService
+2025-03-13 23:06:30,400 - services.service_container - INFO - Registered service: AufmassService
+2025-03-13 23:06:30,400 - services.service_container - INFO - Registered service: StyleService
+2025-03-13 23:06:30,400 - __main__ - INFO - Services initialized and registered
+2025-03-13 23:06:30,400 - viewmodels.main_viewmodel - INFO - MainViewModel initialized
+2025-03-13 23:06:30,401 - viewmodels.project_viewmodel - INFO - ProjectViewModel initialized
+2025-03-13 23:06:30,401 - viewmodels.position_viewmodel - INFO - PositionViewModel initialized
+2025-03-13 23:06:30,401 - viewmodels.aufmass_viewmodel - INFO - AufmassViewModel initialized
+2025-03-13 23:06:30,401 - services.service_container - INFO - Registered service: MainViewModel
+2025-03-13 23:06:30,401 - services.service_container - INFO - Registered service: ProjectViewModel
+2025-03-13 23:06:30,401 - services.service_container - INFO - Registered service: PositionViewModel
+2025-03-13 23:06:30,401 - services.service_container - INFO - Registered service: AufmassViewModel
+2025-03-13 23:06:30,401 - __main__ - INFO - ViewModels initialized and registered
+2025-03-13 23:12:41,923 - services.service_container - INFO - ServiceContainer initialized
+2025-03-13 23:12:42,015 - services.config_service - INFO - Configuration loaded from file
+2025-03-13 23:12:42,015 - services.config_service - INFO - ConfigService initialized with file: config.json
+2025-03-13 23:12:42,017 - services.position_service - INFO - PositionService initialized
+2025-03-13 23:12:42,018 - services.aufmass_service - INFO - AufmassService initialized
+2025-03-13 23:12:42,018 - services.style_service - INFO - StyleService initialized with theme: dark
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: ConfigService
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: DataService
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: PositionService
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: AufmassService
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: StyleService
+2025-03-13 23:12:42,018 - __main__ - INFO - Services initialized and registered
+2025-03-13 23:12:42,018 - viewmodels.main_viewmodel - INFO - MainViewModel initialized
+2025-03-13 23:12:42,018 - viewmodels.project_viewmodel - INFO - ProjectViewModel initialized
+2025-03-13 23:12:42,018 - viewmodels.position_viewmodel - INFO - PositionViewModel initialized
+2025-03-13 23:12:42,018 - viewmodels.aufmass_viewmodel - INFO - AufmassViewModel initialized
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: MainViewModel
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: ProjectViewModel
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: PositionViewModel
+2025-03-13 23:12:42,018 - services.service_container - INFO - Registered service: AufmassViewModel
+2025-03-13 23:12:42,018 - __main__ - INFO - ViewModels initialized and registered
