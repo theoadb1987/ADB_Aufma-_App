@@ -6,6 +6,7 @@ import sys
 import os
 from datetime import datetime
 from dataclasses import dataclass, field
+import dataclasses
 from typing import List, Optional, Dict, Any
 import math
 
@@ -144,15 +145,30 @@ class AufmassItem:
         """Create an AufmassItem instance from a dictionary."""
         # Create a copy to avoid modifying the original
         data_copy = data.copy()
-        
+
         # Handle dates
-        if "created_at" in data_copy:
+        if "created_at" in data_copy and isinstance(data_copy["created_at"], str):
             data_copy["created_at"] = datetime.fromisoformat(data_copy["created_at"])
-        if "updated_at" in data_copy:
+        if "updated_at" in data_copy and isinstance(data_copy["updated_at"], str):
             data_copy["updated_at"] = datetime.fromisoformat(data_copy["updated_at"])
-        
+
         # Handle photos list if present
         if "photos" in data_copy and isinstance(data_copy["photos"], list):
             data_copy["photos"] = data_copy["photos"].copy()
-        
-        return cls(**data_copy)
+
+        # Manually create instance without calling dataclass __init__ to avoid
+        # issues with read-only properties like 'area' and 'perimeter'
+        inst = cls.__new__(cls)
+        for field_obj in cls.__dataclass_fields__.values():
+            if field_obj.name in data_copy:
+                value = data_copy[field_obj.name]
+            else:
+                if field_obj.default_factory is not dataclasses.MISSING:
+                    value = field_obj.default_factory()
+                elif field_obj.default is not dataclasses.MISSING:
+                    value = field_obj.default
+                else:
+                    value = None
+            inst.__dict__[field_obj.name] = value
+
+        return inst

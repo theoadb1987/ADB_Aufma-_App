@@ -726,20 +726,22 @@ class DataService:
             # Parse photos from JSON
             photos = json.loads(row['photos']) if row['photos'] else []
             
-            measurement = AufmassItem(
-                id=row['id'],
-                position_id=row['position_id'],
-                project_id=row['project_id'],
-                inner_width=row['inner_width'],
-                inner_height=row['inner_height'],
-                outer_width=row['outer_width'],
-                outer_height=row['outer_height'],
-                diagonal=row['diagonal'],
-                special_notes=row['special_notes'],
-                photos=photos,
-                created_at=datetime.fromisoformat(row['created_at']),
-                updated_at=datetime.fromisoformat(row['updated_at'])
-            )
+            data_dict = {
+                'id': row['id'],
+                'position_id': row['position_id'],
+                'project_id': row['project_id'],
+                'inner_width': row['inner_width'],
+                'inner_height': row['inner_height'],
+                'outer_width': row['outer_width'],
+                'outer_height': row['outer_height'],
+                'diagonal': row['diagonal'],
+                'special_notes': row['special_notes'],
+                'photos': photos,
+                'created_at': datetime.fromisoformat(row['created_at']),
+                'updated_at': datetime.fromisoformat(row['updated_at'])
+            }
+
+            measurement = AufmassItem.from_dict(data_dict)
             
             return measurement
         

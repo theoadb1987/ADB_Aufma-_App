@@ -102,8 +102,8 @@ class AufmassView(QWidget):
             if existing_measurement:
                 # Update existing measurement
                 measurement_data['id'] = existing_measurement.id
-                success = self._aufmass_service.update_measurement(measurement_data)
-                if not success:
+                measurement_id = self._aufmass_service.update_measurement(measurement_data)
+                if measurement_id == 0:
                     logger.error(f"Failed to update measurement for position {self._current_position_id}")
             else:
                 # Create new measurement
@@ -173,7 +173,7 @@ class AufmassView(QWidget):
             
         try:
             # Update the measurement
-            self._aufmass_service.update_measurement(measurement_data)
+            measurement_id = self._aufmass_service.update_measurement(measurement_data)
             
             # Reload measurements
             self._load_measurements()
