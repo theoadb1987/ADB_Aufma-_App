@@ -293,8 +293,8 @@ class DynamicAufmassUI(QWidget):
         # Calculate final values
         final_data = self.schema_service.calculate_derived_values(self.measurement_data)
         
-        # Emit signal to open designer
-        self.designer_requested.emit(self.current_position_id, final_data)
+        # Emit signal to open designer with position ID as string
+        self.designer_requested.emit(str(self.current_position_id), final_data)
         
     def set_position(self, position_id: str, position_info: Optional[Dict[str, Any]] = None):
         """Set the current position and update UI."""
