@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .frame { fill: none; stroke: #2c3e50; stroke-width: 2; }
+      .roller { fill: #e74c3c; stroke: #c0392b; stroke-width: 1; }
+      .slats { fill: #34495e; stroke: #2c3e50; stroke-width: 0.5; }
+      .guide { fill: #7f8c8d; stroke: #2c3e50; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  
+  <rect width="32" height="32" fill="#ffffff" rx="2"/>
+  
+  <!-- Roller Shutter -->
+  <g transform="translate(4, 4)">
+    <!-- Roller box -->
+    <rect x="0" y="0" width="24" height="4" class="roller"/>
+    
+    <!-- Side guides -->
+    <rect x="0" y="4" width="2" height="20" class="guide"/>
+    <rect x="22" y="4" width="2" height="20" class="guide"/>
+    
+    <!-- Rolled up slats in box -->
+    <circle cx="12" cy="2" r="1.5" class="slats"/>
+    
+    <!-- Hanging slats -->
+    <rect x="2" y="6" width="20" height="1.5" class="slats"/>
+    <rect x="2" y="8" width="20" height="1.5" class="slats"/>
+    <rect x="2" y="10" width="20" height="1.5" class="slats"/>
+    <rect x="2" y="12" width="20" height="1.5" class="slats"/>
+    <rect x="2" y="14" width="20" height="1.5" class="slats"/>
+    
+    <!-- Bottom rail -->
+    <rect x="2" y="16" width="20" height="2" class="frame"/>
+    
+    <!-- Control strap -->
+    <rect x="23" y="10" width="1" height="8" fill="#f39c12" stroke="#e67e22" stroke-width="0.5"/>
+  </g>
+</svg>

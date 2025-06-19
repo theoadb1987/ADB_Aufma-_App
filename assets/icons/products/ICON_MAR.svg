@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css"><![CDATA[
+      .frame { fill: none; stroke: #2c3e50; stroke-width: 2; }
+      .fabric { fill: #e74c3c; stroke: #c0392b; stroke-width: 0.5; }
+      .fabric-stripes { fill: #ffffff; opacity: 0.3; }
+      .tube { fill: #34495e; stroke: #2c3e50; stroke-width: 1; }
+      .arm { fill: none; stroke: #7f8c8d; stroke-width: 2; }
+      .support { fill: #95a5a6; stroke: #7f8c8d; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  
+  <rect width="32" height="32" fill="#ffffff" rx="2"/>
+  
+  <!-- Awning/Markise -->
+  <g transform="translate(2, 6)">
+    <!-- Wall mount -->
+    <rect x="0" y="0" width="28" height="3" class="tube"/>
+    
+    <!-- Support arms (extending) -->
+    <line x1="6" y1="3" x2="8" y2="12" class="arm"/>
+    <line x1="22" y1="3" x2="20" y2="12" class="arm"/>
+    
+    <!-- Fabric (awning canvas) -->
+    <path d="M 4 3 Q 14 6 24 3 L 20 12 Q 14 15 8 12 Z" class="fabric"/>
+    
+    <!-- Fabric stripes pattern -->
+    <g class="fabric-stripes">
+      <path d="M 6 4 Q 14 7 22 4 L 19 11 Q 14 13 9 11 Z" stroke="white" stroke-width="1" fill="none"/>
+      <path d="M 8 5 Q 14 8 20 5 L 18 10 Q 14 12 10 10 Z" stroke="white" stroke-width="1" fill="none"/>
+    </g>
+    
+    <!-- Front rail/valance -->
+    <rect x="8" y="12" width="12" height="1.5" class="tube"/>
+    
+    <!-- Support brackets -->
+    <rect x="5" y="2" width="2" height="2" class="support"/>
+    <rect x="21" y="2" width="2" height="2" class="support"/>
+    
+    <!-- End caps -->
+    <circle cx="8" cy="12.5" r="1" class="support"/>
+    <circle cx="20" cy="12.5" r="1" class="support"/>
+    
+    <!-- Valance (decorative edge) -->
+    <path d="M 8 13.5 Q 10 15 12 13.5 Q 14 15 16 13.5 Q 18 15 20 13.5" 
+          fill="none" stroke="#c0392b" stroke-width="1"/>
+  </g>
+</svg>

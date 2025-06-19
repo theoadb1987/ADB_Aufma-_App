@@ -1,0 +1,174 @@
+{
+  "schnitt_templates": {
+    "S01_fest_einfach": {
+      "file": "S01_fest_einfach.svg",
+      "window_types": ["FT_F"],
+      "description": "Einfaches Festfenster"
+    },
+    "S02_dreh_links": {
+      "file": "S02_dreh_links.svg", 
+      "window_types": ["FT_D"],
+      "description": "Drehfenster DIN Links"
+    },
+    "S03_dreh_rechts": {
+      "file": "S03_dreh_rechts.svg",
+      "window_types": ["FT_D"], 
+      "description": "Drehfenster DIN Rechts"
+    },
+    "S04_kipp": {
+      "file": "S04_kipp.svg",
+      "window_types": ["FT_K"],
+      "description": "Kippfenster"
+    },
+    "S05_dreh_kipp_links": {
+      "file": "S05_dreh_kipp_links.svg",
+      "window_types": ["FT_DK"],
+      "description": "Dreh-Kipp Links"
+    },
+    "S06_dreh_kipp_rechts": {
+      "file": "S06_dreh_kipp_rechts.svg",
+      "window_types": ["FT_DK"],
+      "description": "Dreh-Kipp Rechts"
+    },
+    "S07_zweifluegel_dreh": {
+      "file": "S07_zweifluegel_dreh.svg",
+      "window_types": ["FT_DD"],
+      "description": "Zweiflügeliges Drehfenster"
+    },
+    "S08_zweifluegel_dk": {
+      "file": "S08_zweifluegel_dk.svg", 
+      "window_types": ["FT_DKD"],
+      "description": "Zweiflügel Dreh-Kipp"
+    },
+    "S09_hebe_schiebe": {
+      "file": "S09_hebe_schiebe.svg",
+      "window_types": ["FT_HS"],
+      "description": "Hebe-Schiebe Element"
+    },
+    "S10_psk": {
+      "file": "S10_psk.svg",
+      "window_types": ["FT_PSK"],
+      "description": "Parallel-Schiebe-Kipp"
+    },
+    "S11_schwing": {
+      "file": "S11_schwing.svg",
+      "window_types": ["FT_SVG"],
+      "description": "Schwingfenster"
+    },
+    "S12_vertikal_schiebe": {
+      "file": "S12_vertikal_schiebe.svg",
+      "window_types": ["FT_VS"],
+      "description": "Vertikal-Schiebe"
+    },
+    "S13_horizontal_schiebe": {
+      "file": "S13_horizontal_schiebe.svg",
+      "window_types": ["FT_HS2"],
+      "description": "Horizontal-Schiebe"
+    },
+    "S14_falt": {
+      "file": "S14_falt.svg",
+      "window_types": ["FT_FALT"],
+      "description": "Faltfenster"
+    },
+    "S15_rundbogen": {
+      "file": "S15_rundbogen.svg",
+      "window_types": ["FT_RB"],
+      "description": "Rundbogen fest"
+    },
+    "S16_schraeg_fest": {
+      "file": "S16_schraeg_fest.svg",
+      "window_types": ["FT_SCHR"],
+      "description": "Schräg fest"
+    },
+    "S17_schraeg_dk": {
+      "file": "S17_schraeg_dk.svg",
+      "window_types": ["FT_SCHR"],
+      "description": "Schräg Dreh-Kipp"
+    },
+    "S18_fest_oberlicht": {
+      "file": "S18_fest_oberlicht.svg",
+      "window_types": ["FT_F"],
+      "description": "Fest mit Oberlicht"
+    },
+    "S19_dk_oberlicht": {
+      "file": "S19_dk_oberlicht.svg",
+      "window_types": ["FT_DK"],
+      "description": "Dreh-Kipp mit Oberlicht"
+    },
+    "S20_zweifluegel_oberlicht": {
+      "file": "S20_zweifluegel_oberlicht.svg",
+      "window_types": ["FT_DKD"],
+      "description": "Zweiflügel mit Oberlicht"
+    },
+    "S21_fest_seitenteil": {
+      "file": "S21_fest_seitenteil.svg",
+      "window_types": ["FT_F"],
+      "description": "Fest mit Seitenteil"
+    },
+    "S22_dk_seitenteil": {
+      "file": "S22_dk_seitenteil.svg",
+      "window_types": ["FT_DK"],
+      "description": "Dreh-Kipp mit Seitenteil"
+    },
+    "S23_kombination_gross": {
+      "file": "S23_kombination_gross.svg",
+      "window_types": ["FT_DKD", "FT_F"],
+      "description": "Große Fensterkombination"
+    },
+    "S24_eckfenster": {
+      "file": "S24_eckfenster.svg",
+      "window_types": ["FT_DK"],
+      "description": "Eckfenster-Lösung"
+    },
+    "S25_balkonkombination": {
+      "file": "S25_balkonkombination.svg",
+      "window_types": ["FT_DK", "FT_HS"],
+      "description": "Balkon-Fensterkombination"
+    },
+    "S26_wintergarten": {
+      "file": "S26_wintergarten.svg",
+      "window_types": ["FT_F", "FT_DK"],
+      "description": "Wintergarten-Element"
+    },
+    "S27_shop_front": {
+      "file": "S27_shop_front.svg",
+      "window_types": ["FT_F"],
+      "description": "Schaufenster-System"
+    },
+    "S28_curtain_wall": {
+      "file": "S28_curtain_wall.svg",
+      "window_types": ["FT_F"],
+      "description": "Vorhangfassade"
+    },
+    "S29_brandschutz": {
+      "file": "S29_brandschutz.svg",
+      "window_types": ["FT_F", "FT_DK"],
+      "description": "Brandschutz-Fenster"
+    },
+    "S30_schallschutz": {
+      "file": "S30_schallschutz.svg",
+      "window_types": ["FT_F", "FT_DK"],
+      "description": "Schallschutz-Fenster"
+    },
+    "S31_einbruchschutz": {
+      "file": "S31_einbruchschutz.svg",
+      "window_types": ["FT_DK"],
+      "description": "Einbruchschutz-Fenster"
+    },
+    "S32_barrierefrei": {
+      "file": "S32_barrierefrei.svg",
+      "window_types": ["FT_HS"],
+      "description": "Barrierefreie Lösung"
+    },
+    "S33_passivhaus": {
+      "file": "S33_passivhaus.svg",
+      "window_types": ["FT_DK"],
+      "description": "Passivhaus-Fenster"
+    },
+    "S34_sonderform": {
+      "file": "S34_sonderform.svg",
+      "window_types": ["FT_F"],
+      "description": "Sonderform-Element"
+    }
+  }
+}

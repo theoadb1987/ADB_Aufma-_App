@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" 
+     xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <style type="text/css"><![CDATA[
+      .frame { fill: none; stroke: #2c3e50; stroke-width: 2; }
+      .sash { fill: none; stroke: #34495e; stroke-width: 1.5; }
+      .glass { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 0.5; opacity: 0.8; }
+      .hardware { fill: #7f8c8d; stroke: #2c3e50; stroke-width: 0.5; }
+      .direction { fill: none; stroke: #e74c3c; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  
+  <rect width="64" height="64" fill="#ffffff" rx="4"/>
+
+  <g transform="translate(8, 14.0)">
+    <rect x="0" y="0" width="48" height="36.0" class="frame"/>
+    <rect x="3" y="3" 
+          width="42" height="30.0" class="sash"/>
+    <rect x="5" y="5" 
+          width="38" height="26.0" class="glass"/>
+    
+    <!-- Turn hinges -->
+    <rect x="1" y="9.0" width="3" height="5" class="hardware"/>
+    <rect x="1" y="23.400000000000002" width="3" height="5" class="hardware"/>
+    
+    <!-- Tilt hardware -->
+    <rect x="19.200000000000003" y="33.0" width="6" height="2" class="hardware"/>
+    
+    <!-- Handle -->
+    <circle cx="40" cy="18.0" r="2" class="hardware"/>
+  </g>
+</svg>

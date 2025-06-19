@@ -1,0 +1,88 @@
+{
+  "begriffe": {
+    "Sturz": "Tragendes Mauerwerk über der Öffnung",
+    "Oberlicht": "Element über dem Hauptflügel",
+    "Kämpfer": "Horizontale Rahmenunterteilung",
+    "Mittelpfosten": "Vertikale Unterteilung",
+    "Sprosse": "Profil zur Scheibenunterteilung",
+    "Laibung": "Wandfläche zwischen Rahmen & Außenkante",
+    "Blendrahmen": "Feststehender äußerer Rahmen",
+    "Flügelrahmen": "Beweglicher innerer Rahmen",
+    "Verglasung": "Glas- oder Füllungselement",
+    "Beschlag": "Mechanische Öffnungs- und Schließelemente",
+    "Dichtung": "Abdichtung zwischen den Rahmenprofilen",
+    "Falz": "Überlappungsbereich zwischen Blend- und Flügelrahmen"
+  },
+  "fenstertypen": {
+    "FT_F": {
+      "name": "Festverglasung",
+      "beschreibung": "Unverriegeltes Festfenster ohne Öffnungsmechanismus",
+      "anwendung": "Belichtung ohne Lüftungsfunktion"
+    },
+    "FT_D": {
+      "name": "Dreh-Fenster", 
+      "beschreibung": "Fenster mit seitlicher Drehachse, DIN Links oder Rechts",
+      "anwendung": "Einfache Lüftung und Reinigung"
+    },
+    "FT_K": {
+      "name": "Kipp-Fenster",
+      "beschreibung": "Fenster mit oberer Kippachse für Spaltkippung",
+      "anwendung": "Kontinuierliche Lüftung bei geschlossenem Zustand"
+    },
+    "FT_DK": {
+      "name": "Dreh-Kipp",
+      "beschreibung": "Standard-Fenster mit Dreh- und Kippfunktion",
+      "anwendung": "Vielseitige Lüftung und vollständiger Zugang"
+    },
+    "FT_DD": {
+      "name": "2-flg. Dreh/Dreh",
+      "beschreibung": "Zweiflügelfenster mit Mittelpfosten, beide Flügel drehbar",
+      "anwendung": "Große Öffnungen mit mittiger Teilung"
+    },
+    "FT_DKD": {
+      "name": "2-flg. Dreh-Kipp",
+      "beschreibung": "Zweiflügelfenster, beide Flügel mit Dreh-Kipp-Funktion",
+      "anwendung": "Maximale Funktionalität bei großen Fenstern"
+    },
+    "FT_HS": {
+      "name": "Hebe-Schiebe",
+      "beschreibung": "Schwere Schiebeelemente in paralleler Ebene",
+      "anwendung": "Terrassentüren und große Glasflächen"
+    },
+    "FT_PSK": {
+      "name": "Parallel-Schiebe-Kipp",
+      "beschreibung": "Kombiniert Kipp- und Schiebefunktion",
+      "anwendung": "Kompakte Lösung für begrenzte Öffnungsräume"
+    },
+    "FT_SVG": {
+      "name": "Schwing-Fenster",
+      "beschreibung": "Mittig gelagertes Fenster, um horizontale Achse drehbar",
+      "anwendung": "Dachfenster und spezielle Anwendungen"
+    },
+    "FT_VS": {
+      "name": "Vertikal-Schiebe",
+      "beschreibung": "Double-hung System mit vertikal verschiebbaren Flügeln",
+      "anwendung": "Traditionelle Architektur, denkmalgeschützte Gebäude"
+    },
+    "FT_HS2": {
+      "name": "Horizontal-Schiebe",
+      "beschreibung": "Zwei horizontal verschiebbare Schiebeflügel",
+      "anwendung": "Einfache Schiebetechnik für mittlere Öffnungen"
+    },
+    "FT_FALT": {
+      "name": "Falt-Fenster/Tür",
+      "beschreibung": "Mehrteiliges System mit faltbaren Elementen",
+      "anwendung": "Große Öffnungen mit kompakter Falttechnik"
+    },
+    "FT_RB": {
+      "name": "Rundbogen-Fenster",
+      "beschreibung": "Feststehende Elemente mit Rundbogengeometrie",
+      "anwendung": "Architektonische Gestaltung, historische Gebäude"
+    },
+    "FT_SCHR": {
+      "name": "Schrägelement",
+      "beschreibung": "Fest oder mit Dreh-Kipp, für schräge Einbausituationen",
+      "anwendung": "Dachschrägen, Sonderkonstruktionen"
+    }
+  }
+}

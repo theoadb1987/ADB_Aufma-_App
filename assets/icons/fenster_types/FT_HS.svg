@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" 
+     xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <style type="text/css"><![CDATA[
+      .frame { fill: none; stroke: #2c3e50; stroke-width: 2; }
+      .sash { fill: none; stroke: #34495e; stroke-width: 1.5; }
+      .glass { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 0.5; opacity: 0.8; }
+      .hardware { fill: #7f8c8d; stroke: #2c3e50; stroke-width: 0.5; }
+      .direction { fill: none; stroke: #e74c3c; stroke-width: 1; }
+    ]]></style>
+  </defs>
+  
+  <rect width="64" height="64" fill="#ffffff" rx="4"/>
+
+  <g transform="translate(8, 14.0)">
+    <rect x="0" y="0" width="48" height="36.0" class="frame"/>
+    
+    <!-- Fixed panel -->
+    <rect x="3" y="3" 
+          width="21" height="30.0" class="glass"/>
+    
+    <!-- Sliding panel -->
+    <rect x="26" y="3" 
+          width="19" height="30.0" class="sash"/>
+    <rect x="28" y="5" 
+          width="15" height="26.0" class="glass"/>
+    
+    <!-- Track -->
+    <line x1="0" y1="34.0" x2="48" y2="34.0" class="hardware" stroke-width="2"/>
+    
+    <!-- Slide direction -->
+    <path d="M 33.599999999999994 32.4 L 43.2 30.599999999999998 L 43.2 34.199999999999996 Z" 
+          class="direction"/>
+  </g>
+</svg>
